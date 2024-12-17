@@ -1,0 +1,23 @@
+[
+  {
+    "id": "vikare-battle",
+    "name": "Vikare Battle",
+    "subtitle": "Everai x Argent x Starknet",
+    "description": "nice description for Vikare Battle",
+    "status": "production"
+  },
+  {
+    "id": "overdrive",
+    "name": "Overdrive",
+    "subtitle": "Cartridge x Starknet",
+    "description": "nice description for overdrive",
+    "status": "development"
+  },
+  {
+    "id": "dod",
+    "name": "Depths of Dread",
+    "subtitle": "Cartridge x Starknet",
+    "description": "nice description for depths of dread",
+    "status": "development"
+  }
+]
