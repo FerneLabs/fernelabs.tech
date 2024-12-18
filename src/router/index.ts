@@ -12,9 +12,18 @@ const router = createRouter({
     },
     {
       path: '/game/:id',
+      name: 'game',
       component: GameView,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    // For some reason when opening the link with hash, negative top is needed
+    if (from.name === undefined && to.hash === '#about') {
+      return { el: '#about', top: -500 }
+    } else if (to.hash === '#about') {
+      return { el: '#about' }
+    }
+  },
 })
 
 export default router

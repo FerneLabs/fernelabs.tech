@@ -55,8 +55,7 @@ const setOpen = (state: boolean) => {
         </div>
       </transition>
 
-      <!-- <RouterLink to="/#about"> about </RouterLink> -->
-      <a href="#about">about</a>
+      <RouterLink to="/#about"> about </RouterLink>
     </div>
   </nav>
 </template>
