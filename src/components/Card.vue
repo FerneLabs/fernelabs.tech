@@ -23,6 +23,6 @@ const getImgUrl = () => {
   >
     <img :src="getImgUrl()" class="w-full h-full" />
     <h3 class="text-xl mt-2 md:text-base">{{ title }}</h3>
-    <p class="text-base md:text-xs tracking-tighter opacity-60">{{ subtitle }}</p>
+    <p class="text-base md:text-xs tracking-tight font-bold text-primary">{{ subtitle }}</p>
   </RouterLink>
 </template>

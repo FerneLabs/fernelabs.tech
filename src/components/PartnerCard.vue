@@ -36,9 +36,9 @@ const { name, redirectUrl, height = '200', width = '200' } = defineProps<Props>(
         v-show="hover"
         class="absolute top-0 flex flex-col justify-center items-center w-full bg-backdrop90 h-full"
       >
-        <p class="text-xl text-bg cursor-default">{{ name.replace('-', ' ') }}</p>
+        <p class="text-xl text-background cursor-default">{{ name.replace('-', ' ') }}</p>
         <a
-          class="link-highlight text-bg hover:text-text"
+          class="link-highlight text-background hover:text-text"
           :href="redirectUrl"
           target="_blank"
           rel="noopener"

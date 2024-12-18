@@ -4,6 +4,8 @@
     "name": "Vikare Battle",
     "subtitle": "Everai x Argent x Starknet",
     "description": "nice description for Vikare Battle",
+    "platforms": ["telegram"],
+    "demoLink": "",
     "status": "production"
   },
   {
@@ -11,6 +13,8 @@
     "name": "Overdrive",
     "subtitle": "Cartridge x Starknet",
     "description": "nice description for overdrive",
+    "platforms": ["telegram"],
+    "demoLink": "",
     "status": "development"
   },
   {
@@ -18,6 +22,8 @@
     "name": "Depths of Dread",
     "subtitle": "Cartridge x Starknet",
     "description": "nice description for depths of dread",
+    "platforms": ["telegram"],
+    "demoLink": "",
     "status": "development"
   }
 ]

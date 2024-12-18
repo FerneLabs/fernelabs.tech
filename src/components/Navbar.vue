@@ -13,7 +13,9 @@ const setOpen = (state: boolean) => {
 </script>
 
 <template>
-  <nav class="flex flex-row justify-between items-center w-full h-32 px-10 sticky top-0 bg-bg z-10">
+  <nav
+    class="flex flex-row justify-between items-center w-full h-32 px-10 fixed top-0 bg-background z-10"
+  >
     <RouterLink to="/" @click="gotoTop()">
       <img alt="fernelabs logo" src="@/assets/logo.png" class="w-24" />
     </RouterLink>
@@ -39,7 +41,7 @@ const setOpen = (state: boolean) => {
       >
         <div
           v-show="gamesOpen"
-          class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col bg-bg w-[50vw] md:w-fit"
+          class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col bg-background w-[50vw] md:w-fit"
           @mouseenter="setOpen(true)"
           @mouseleave="setOpen(false)"
         >

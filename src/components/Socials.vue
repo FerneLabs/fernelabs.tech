@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import GitHubIcon from './icons/GitHub-icon.vue'
-import LinkedInIcon from './icons/LinkedIn-icon.vue'
-import XIcon from './icons/X-icon.vue'
+import IconGeneric from './IconGeneric.vue'
 
 const colorValue = `rgba(${window.getComputedStyle(document.documentElement).getPropertyValue('--color-text')}, 1)`
 </script>
@@ -14,7 +12,7 @@ const colorValue = `rgba(${window.getComputedStyle(document.documentElement).get
       rel="noopener"
       class="mx-8 transition ease-in-out hover:scale-125 duration-300"
     >
-      <GitHubIcon :color="colorValue" />
+      <IconGeneric type="github" :color="colorValue" />
     </a>
     <a
       href="https://linkedin.com/company/fernelabs"
@@ -22,7 +20,7 @@ const colorValue = `rgba(${window.getComputedStyle(document.documentElement).get
       rel="noopener"
       class="mx-8 transition ease-in-out hover:scale-125 duration-300"
     >
-      <LinkedInIcon :color="colorValue" />
+      <IconGeneric type="linkedin" :color="colorValue" />
     </a>
     <a
       href="https://x.com/fernelabs"
@@ -30,7 +28,7 @@ const colorValue = `rgba(${window.getComputedStyle(document.documentElement).get
       rel="noopener"
       class="mx-8 transition ease-in-out hover:scale-125 duration-300"
     >
-      <XIcon :color="colorValue" />
+      <IconGeneric type="x" :color="colorValue" />
     </a>
   </div>
 </template>
