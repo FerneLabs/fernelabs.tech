@@ -1,5 +1,6 @@
 <template>
-  <div id="about" class="flex flex-col w-full px-20 py-[30]">
+  <div class="flex flex-col w-full px-20">
+    <span id="about" class="block relative top-[-100px] invisible"></span>
     <h2>who we are</h2>
     <p class="my-2">
       Ferne::Labs is a game studio born in 2024 with the goal of making appealing and accessible
