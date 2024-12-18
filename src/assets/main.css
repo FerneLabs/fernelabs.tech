@@ -2,6 +2,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer base {
+  :root {
+    --color-text: 74, 45, 27;
+    --color-primary: 252, 229, 162;
+    --color-secondary: 127, 235, 201;
+    --color-accent: 83, 152, 228;
+    --color-bg: 243, 240, 249;
+  }
+}
 
 * {
   font-family: 'JetBrains Mono', monospace;
@@ -38,9 +47,35 @@ h4 {
   font-size: 1em;
 }
 
-#app {
-  width: 100%;
-  font-weight: normal;
+a {
+  transition: color 0.2s ease 0s;
+  text-decoration: none;
+}
+
+.link-highlight {
+  background-color: transparent;
+  padding: 2px 0 1px;
+  cursor: pointer;
+  background-image: linear-gradient(
+    transparent 0,
+    transparent calc(50% - 9px),
+    rgba(var(--color-primary), 0.35) calc(50% - 9px),
+    rgba(var(--color-primary), 0.35) 100%
+  );
+  transition: all 120ms ease-in-out 0s;
+  background-size: 100% 200%;
+  background-position: 0 0;
+  word-break: break-word;
+}
+
+.link-highlight:hover {
+  background-image: linear-gradient(
+    transparent 0,
+    transparent calc(50% - 9px),
+    rgba(var(--color-primary), 1) calc(50% - 9px),
+    rgba(var(--color-primary), 1) 100%
+  );
+  background-position: 0 100%;
 }
 
 @media (hover: hover) {

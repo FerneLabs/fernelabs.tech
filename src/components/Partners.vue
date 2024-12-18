@@ -33,7 +33,7 @@ export default {
         :href="partner.redirectUrl"
         target="_blank"
         rel="noopener"
-        class="mx-8"
+        class="mx-8 transition ease-in-out hover:scale-110 duration-300"
       >
         <img
           :src="getImgUrl(partner.name)"

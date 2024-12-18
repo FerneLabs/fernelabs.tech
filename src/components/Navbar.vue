@@ -1,8 +1,9 @@
 <script>
 import { ref } from 'vue'
+import { defineComponent } from 'vue'
 import gamesJson from '../assets/games.json'
 
-export default {
+export default defineComponent({
   setup() {
     const gamesHover = ref(false)
     const games = ref(gamesJson)
@@ -18,11 +19,11 @@ export default {
       toggleHover,
     }
   },
-}
+})
 </script>
 
 <template>
-  <nav class="flex flex-row justify-between items-center w-full h-32 px-10 sticky top-0">
+  <nav class="flex flex-row justify-between items-center w-full h-32 px-10 sticky top-0 bg-bg z-10">
     <RouterLink to="/">
       <img alt="fernelabs logo" src="@/assets/logo.png" width="75" height="75" />
     </RouterLink>
@@ -38,7 +39,7 @@ export default {
 
       <div
         v-show="gamesHover"
-        class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col transition-opacity duration-200"
+        class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col bg-bg"
         @mouseenter="toggleHover(true)"
         @mouseleave="toggleHover(false)"
       >
@@ -52,7 +53,8 @@ export default {
         </RouterLink>
       </div>
 
-      <RouterLink to="/#about"> about </RouterLink>
+      <!-- <RouterLink to="/#about"> about </RouterLink> -->
+      <a href="#about">about</a>
     </div>
   </nav>
 </template>

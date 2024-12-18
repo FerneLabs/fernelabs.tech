@@ -10,7 +10,7 @@ import Socials from '../components/Socials.vue'
   <main>
     <Hero />
     <CardGallery title="built by us" status="production" />
-    <CardGallery title="work in progress" status="development" />
+    <CardGallery title="currently in development" status="development" />
     <About />
     <Partners />
     <Socials />

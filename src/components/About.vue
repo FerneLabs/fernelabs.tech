@@ -1,5 +1,5 @@
 <template>
-  <div name="about" class="flex flex-col w-full px-20 my-10">
+  <div id="about" class="flex flex-col w-full px-20 py-[30]">
     <h2>who we are</h2>
     <p class="my-2">
       Ferne::Labs is a game studio born in 2024 with the goal of making appealing and accessible
@@ -8,7 +8,7 @@
     </p>
     <p class="my-2">
       We focus on developing on-chain games, with a primary emphasis on the
-      <a href="https://www.starknet.io/" target="_blank" rel="noopener"
+      <a href="https://www.starknet.io/" target="_blank" rel="noopener" class="link-highlight"
         >Ethereum Starknet L2 chain</a
       >. While this is our principal development environment, we are not limited to it and we
       actively explore other blockchain ecosystems to broaden our creative horizons. Our mission is

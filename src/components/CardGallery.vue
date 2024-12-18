@@ -23,9 +23,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <div class="flex flex-col w-full px-20 my-10">
+  <div class="flex flex-col w-full px-20 my-20">
     <h2>{{ title }}</h2>
-    <div class="flex flex-row justify-center items-center mt-10">
+    <div class="flex flex-row justify-center items-center mt-5">
       <Card
         v-for="game in games"
         :key="game.id"
