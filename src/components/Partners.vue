@@ -6,9 +6,9 @@ const partners = partnersJson
 </script>
 
 <template>
-  <div class="flex flex-col w-full px-20 my-10">
+  <div class="flex flex-col w-full px-4 md:px-20 my-10">
     <h2>powered by</h2>
-    <div class="flex flex-row justify-center items-center mt-10">
+    <div class="flex flex-col md:flex-row justify-center items-center mt-10">
       <PartnerCard
         v-for="partner in partners"
         :key="partner.name"

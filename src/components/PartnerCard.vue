@@ -22,7 +22,7 @@ const { name, redirectUrl, height = '200', width = '200' } = defineProps<Props>(
 </script>
 
 <template>
-  <div @mouseenter="setHover(true)" @mouseleave="setHover(false)" class="relative">
+  <div @mouseenter="setHover(true)" @mouseleave="setHover(false)" class="relative my-2">
     <img :src="getImgUrl(name)" :alt="`${name} logo`" :height="height" :width="width" />
     <transition
       enter-active-class="transition-opacity duration-300"

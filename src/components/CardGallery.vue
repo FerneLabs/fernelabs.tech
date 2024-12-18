@@ -1,31 +1,21 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import Card from './Card.vue'
 import gamesJson from '../assets/games.json'
 
-export default defineComponent({
-  props: {
-    title: String,
-    status: String,
-  },
-  components: {
-    Card,
-  },
-  setup(props) {
-    const games = gamesJson.filter((game) => game.status === props.status)
+interface Props {
+  title: string
+  status: string
+}
 
-    return {
-      games,
-      props,
-    }
-  },
-})
+const props = defineProps<Props>()
+
+const games = gamesJson.filter((game) => game.status === props.status)
 </script>
 
 <template>
-  <div class="flex flex-col w-full px-20 my-20">
+  <div class="flex flex-col w-full px-4 md:px-20 my-20">
     <h2>{{ title }}</h2>
-    <div class="flex flex-row justify-center items-center mt-5">
+    <div class="flex flex-col md:flex-row justify-center items-center mt-5">
       <Card
         v-for="game in games"
         :key="game.id"

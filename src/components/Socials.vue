@@ -7,7 +7,7 @@ const colorValue = `rgba(${window.getComputedStyle(document.documentElement).get
 </script>
 
 <template>
-  <div class="flex flex-row justify-center items-center w-full py-10 px-40 mt-40">
+  <div class="flex flex-row justify-center items-center w-full py-10 px-40 mt-20 mb-10 md:mt-40">
     <a
       href="https://github.com/fernelabs"
       target="_blank"
