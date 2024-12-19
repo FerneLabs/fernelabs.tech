@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import TransitionGeneric from './TransitionGeneric.vue'
 
 interface Props {
   name: string
@@ -24,14 +25,7 @@ const { name, redirectUrl, height = '200', width = '200' } = defineProps<Props>(
 <template>
   <div @mouseenter="setHover(true)" @mouseleave="setHover(false)" class="relative my-2">
     <img :src="getImgUrl(name)" :alt="`${name} logo`" :height="height" :width="width" />
-    <transition
-      enter-active-class="transition-opacity duration-300"
-      leave-active-class="transition-opacity duration-300"
-      enter-from-class="opacity-0"
-      enter-to-class="opacity-100"
-      leave-from-class="opacity-100"
-      leave-to-class="opacity-0"
-    >
+    <TransitionGeneric type="opacityFromMin" duration="300">
       <div
         v-show="hover"
         class="absolute top-0 flex flex-col justify-center items-center w-full bg-backdrop90 h-full"
@@ -45,6 +39,6 @@ const { name, redirectUrl, height = '200', width = '200' } = defineProps<Props>(
           >see more</a
         >
       </div>
-    </transition>
+    </TransitionGeneric>
   </div>
 </template>

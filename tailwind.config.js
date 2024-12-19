@@ -15,7 +15,7 @@ export default {
       },
       keyframes: {
         blockCaret: {
-          '0%, 20%, 80% 100%': {
+          '0%, 20%,  100%': {
             backgroundColor: 'transparent',
           },
           '30%, 70%': {

@@ -4,8 +4,8 @@ import heroGlosary from '../assets/hero-words.json'
 
 const currentWord = ref('')
 const displayedWord = ref('')
-const animationDuration = 5000
-const blankDuration = 1000
+const animationDuration = 6000
+const blankDuration = 1500
 const charActionDuration = 125
 
 const isInView = ref(false)
@@ -27,7 +27,7 @@ function startAnimation() {
 
       currentWord.value = newWord
       startTypingEffect(newWord)
-    }, 5000)
+    }, animationDuration)
   }
 }
 

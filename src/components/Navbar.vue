@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import gamesJson from '../assets/games.json'
+import TransitionGeneric from './TransitionGeneric.vue'
 
 const gamesOpen = ref(false)
 const games = ref(gamesJson)
@@ -31,14 +32,7 @@ const setOpen = (state: boolean) => {
         games
       </p>
 
-      <transition
-        enter-active-class="transition-opacity duration-300"
-        leave-active-class="transition-opacity duration-300"
-        enter-from-class="opacity-0"
-        enter-to-class="opacity-100"
-        leave-from-class="opacity-100"
-        leave-to-class="opacity-0"
-      >
+      <TransitionGeneric type="opacityFromMin" duration="300">
         <div
           v-show="gamesOpen"
           class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col bg-background w-[50vw] md:w-fit"
@@ -55,7 +49,7 @@ const setOpen = (state: boolean) => {
             {{ game.name }}
           </RouterLink>
         </div>
-      </transition>
+      </TransitionGeneric>
 
       <RouterLink to="/#about"> about </RouterLink>
     </div>
