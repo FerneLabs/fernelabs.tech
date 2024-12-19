@@ -1,7 +1,17 @@
-[
-  { "word": "games" },
-  { "word": "worlds" },
-  { "word": "connections" },
-  { "word": "fun" },
-  { "word": "memories" }
-]
+{
+  "words": [
+    "games",
+    "worlds",
+    "connections",
+    "fun",
+    "memories",
+    "stories",
+    "adventures",
+    "challenges",
+    "journeys",
+    "possibilities",
+    "innovation",
+    "discovery",
+    "collaboration"
+  ]
+}

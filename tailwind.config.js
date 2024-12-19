@@ -13,6 +13,19 @@ export default {
         backdrop75: 'rgba(var(--color-text), 0.75)',
         backdrop90: 'rgba(var(--color-text), 0.9)',
       },
+      keyframes: {
+        blockCaret: {
+          '0%, 20%, 80% 100%': {
+            backgroundColor: 'transparent',
+          },
+          '30%, 70%': {
+            backgroundColor: 'rgba(var(--color-text), 1)',
+          },
+        },
+      },
+      animation: {
+        blockCaret: 'blockCaret 1.5s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
