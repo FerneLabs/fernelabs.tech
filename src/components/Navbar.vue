@@ -32,7 +32,14 @@ const setOpen = (state: boolean) => {
         games
       </p>
 
-      <TransitionGeneric type="opacityFromMin" duration="300">
+      <transition
+        enter-active-class="transition-opacity duration-300"
+        leave-active-class="transition-opacity duration-300"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
         <div
           v-show="gamesOpen"
           class="absolute top-20 right-20 bg-white shadow-lg rounded p-4 flex flex-col bg-background w-[50vw] md:w-fit"
@@ -49,7 +56,7 @@ const setOpen = (state: boolean) => {
             {{ game.name }}
           </RouterLink>
         </div>
-      </TransitionGeneric>
+      </transition>
 
       <RouterLink to="/#about"> about </RouterLink>
     </div>
