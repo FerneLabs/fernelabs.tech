@@ -45,7 +45,9 @@ const getImgUrl = () => {
           </a>
         </div>
       </div>
-      <p class="text-background my-6 md:mb-4">{{ props.description }}</p>
+      <div class="flex flex-col my-6 md:mb-4">
+        <p v-for="paragraph in props.description" class="text-background my-1">{{ paragraph }}</p>
+      </div>
       <p class="text-background">
         <span class="text-background underline">ecosystem:</span>
         {{ props.subtitle }}

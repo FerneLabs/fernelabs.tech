@@ -3,7 +3,10 @@
     "id": "vikare-battle",
     "name": "Vikare Battle",
     "subtitle": "Everai x Argent x Starknet",
-    "description": "Set during the iconic Battle of Vikare, the game invites players to engage in a competitive, idle-based gameplay within the Telegram ecosystem. This strategic choice brings the lore to life while utilizing Telegram's interaction and sharing capabilities.",
+    "description": [
+      "Set during the iconic Battle of Vikare, the game invites players to engage in a competitive, idle-based gameplay within the Telegram ecosystem.",
+      "This strategic choice brings the lore to life while utilizing Telegram's interaction and sharing capabilities."
+    ],
     "platforms": [{ "name": "telegram", "url": "https://t.me/vikarebattlebot" }],
     "socials": [
       { "name": "x", "url": "https://x.com/Everai" },
@@ -16,7 +19,10 @@
     "id": "overdrive",
     "name": "Overdrive",
     "subtitle": "Cartridge x Starknet",
-    "description": "nice description for overdrive",
+    "description": [
+      "Overdrive is a fast-paced mobile game blending strategic card mechanics with high-speed racing.",
+      "Hack, combine, and deploy abilities to outmaneuver your rival and cross the finish line first. Perfect timing and clever strategy are your keys to victory."
+    ],
     "platforms": [],
     "socials": [{ "name": "x", "url": "https://x.com/FerneLabs" }],
     "assets": [],
@@ -26,7 +32,10 @@
     "id": "depths-of-dread",
     "name": "Depths of Dread",
     "subtitle": "Cartridge x Starknet",
-    "description": "nice description for depths of dread",
+    "description": [
+      "Navigate deadly dungeons in this top-down roguelike where every floor is a challenge. Memorize the path revealed at the start, dodge hidden traps, and outwit enemies in your quest to escape.",
+      "Collect treasures to boost your score, but beware—one wrong move resets your progress. With retro visuals and intense gameplay, Depths of Dread is your ultimate test of skill and strategy."
+    ],
     "platforms": [],
     "socials": [{ "name": "x", "url": "https://x.com/FerneLabs" }],
     "assets": [],
