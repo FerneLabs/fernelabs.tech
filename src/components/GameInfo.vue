@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import IconGeneric from '@/components/IconGeneric.vue'
-import gamesJson from '../assets/games.json'
-import { ref } from 'vue'
+
 interface Props {
   id?: string
   name?: string
-  description?: string
+  description?: string[]
   subtitle?: string
   platforms?: { name: string; url: string }[]
   socials?: { name: string; url: string }[]
   assets?: string[]
   status?: string
 }
-
 const props = defineProps<Props>()
 
 const bgColor = `rgba(${window.getComputedStyle(document.documentElement).getPropertyValue('--color-bg')}, 1)`
