@@ -22,15 +22,15 @@ const maximizeImg = (asset: string) => {
 </script>
 
 <template>
-  <div v-show="assets && assets.length > 0" class="flex flex-col p-8">
+  <div v-show="assets && assets.length > 0" class="flex flex-col p-4 md:p-8">
     <h1>gallery</h1>
-    <div class="flex flex-row justify-center items-center w-full">
+    <div class="flex flex-col md:flex-row justify-center items-center w-full">
       <img
         v-for="asset in assets"
         :key="asset"
         :src="getGalleryImgUrl(asset)"
         :alt="`${asset} image`"
-        class="w-1/6 mx-2 cursor-pointer transition ease-in-out hover:scale-110 duration-300"
+        class="w-3/4 md:w-1/4 lg:w-1/5 xl:w-1/6 my-2 mx-2 cursor-pointer transition ease-in-out hover:scale-110 duration-300"
         @click="maximizeImg(asset)"
       />
     </div>
@@ -38,10 +38,10 @@ const maximizeImg = (asset: string) => {
   <TransitionGeneric type="opacityFromMin" duration="500">
     <div
       v-show="previewImg !== ''"
-      class="fixed top-0 left-0 w-full h-full bg-black/75 z-50 flex flex-row justify-center items-center"
+      class="fixed top-0 left-0 w-screen h-screen bg-black/75 z-50 flex flex-row justify-center items-center"
       @click="previewImg = ''"
     >
-      <img :src="previewImg" class="h-[90vh] ml-12" />
+      <img :src="previewImg" class="p-10 md:p-0 md:ml-12 md:h-[90vh] aspect-[9/16]" />
     </div>
   </TransitionGeneric>
 </template>

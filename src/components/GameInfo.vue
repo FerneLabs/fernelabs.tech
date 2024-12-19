@@ -27,26 +27,31 @@ const getImgUrl = () => {
     <img
       :src="getImgUrl()"
       :alt="`${props.name} cover picture`"
-      class="w-[25vw] h-[25vw] aspect-square"
+      class="w-[90vw] h-[90vw] md:w-[25vw] md:h-[25vw] aspect-square"
     />
-    <div class="flex flex-col px-8">
-      <div class="flex flex-row items-center">
-        <h1 class="text-background my-0 mr-4">{{ props.name }}</h1>
-        <a
-          v-for="social in props.socials"
-          :key="social.name"
-          :href="social.url"
-          rel="noopener"
-          target="_blank"
-          class="mx-2 w-fit transition ease-in-out hover:scale-110 duration-300"
-        >
-          <IconGeneric :type="social.name" :color="bgColor" height="24" width="24" />
-        </a>
+    <div class="flex flex-col px-8 w-full">
+      <div class="flex flex-col md:flex-row md:items-center">
+        <h1 class="text-background my-2 md:my-0 mr-4">{{ props.name }}</h1>
+        <div class="flex flex-row">
+          <a
+            v-for="social in props.socials"
+            :key="social.name"
+            :href="social.url"
+            rel="noopener"
+            target="_blank"
+            class="mr-4 md:mx-2 w-fit transition ease-in-out hover:scale-110 duration-300"
+          >
+            <IconGeneric :type="social.name" :color="bgColor" class="w-8 h-8 md:w-6 md:h-6" />
+          </a>
+        </div>
       </div>
-      <p class="text-background mb-4">{{ props.description }}</p>
-      <p class="text-background mb-4">ecosystem: {{ props.subtitle }}</p>
-      <div v-show="props.platforms && props.platforms.length > 0">
-        <p class="text-background">available on</p>
+      <p class="text-background my-6 md:mb-4">{{ props.description }}</p>
+      <p class="text-background">
+        <span class="text-background underline">ecosystem:</span>
+        {{ props.subtitle }}
+      </p>
+      <div v-show="props.platforms && props.platforms.length > 0" class="flex flex-col">
+        <p class="text-background underline">available on:</p>
         <a
           v-for="platform in props.platforms"
           :key="platform.name"
@@ -55,8 +60,14 @@ const getImgUrl = () => {
           target="_blank"
           class="mt-4 w-fit transition ease-in-out hover:scale-110 duration-300"
         >
-          <IconGeneric :type="platform.name" :color="bgColor" />
+          <IconGeneric :type="platform.name" :color="bgColor" class="w-10 h-10 md:w-8 md:h-8" />
         </a>
+      </div>
+      <div v-show="props.platforms && props.platforms.length == 0" class="flex flex-col">
+        <p class="text-background">
+          <span class="text-background underline">stage:</span>
+          {{ props.status }}
+        </p>
       </div>
     </div>
   </div>
