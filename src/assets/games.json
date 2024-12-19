@@ -3,9 +3,13 @@
     "id": "vikare-battle",
     "name": "Vikare Battle",
     "subtitle": "Everai x Argent x Starknet",
-    "description": "nice description for Vikare Battle",
-    "platforms": ["telegram"],
-    "demoLink": "",
+    "description": "Set during the iconic Battle of Vikare, the game invites players to engage in a competitive, idle-based gameplay within the Telegram ecosystem. This strategic choice brings the lore to life while utilizing Telegram's interaction and sharing capabilities.",
+    "platforms": [{ "name": "telegram", "url": "https://t.me/vikarebattlebot" }],
+    "socials": [
+      { "name": "x", "url": "https://x.com/Everai" },
+      { "name": "telegram", "url": "https://t.me/+cFs1yQmrVuUxODJk" }
+    ],
+    "assets": ["gameplay.png", "upgrades.png", "tasks.png", "leaderboard.png"],
     "status": "production"
   },
   {
@@ -13,8 +17,9 @@
     "name": "Overdrive",
     "subtitle": "Cartridge x Starknet",
     "description": "nice description for overdrive",
-    "platforms": ["telegram"],
-    "demoLink": "",
+    "platforms": [],
+    "socials": [{ "name": "x", "url": "https://x.com/FerneLabs" }],
+    "assets": [],
     "status": "development"
   },
   {
@@ -22,8 +27,9 @@
     "name": "Depths of Dread",
     "subtitle": "Cartridge x Starknet",
     "description": "nice description for depths of dread",
-    "platforms": ["telegram"],
-    "demoLink": "",
+    "platforms": [],
+    "socials": [{ "name": "x", "url": "https://x.com/FerneLabs" }],
+    "assets": [],
     "status": "development"
   }
 ]
