@@ -41,7 +41,11 @@ const maximizeImg = (asset: string) => {
       class="fixed top-0 left-0 w-screen h-screen bg-black/75 z-50 flex flex-row justify-center items-center"
       @click="previewImg = ''"
     >
-      <img :src="previewImg" class="p-10 md:p-0 md:ml-12 md:h-[90vh] aspect-[9/16]" />
+      <img
+        alt="preview image"
+        :src="previewImg"
+        class="p-10 md:p-0 md:ml-12 md:h-[90vh] aspect-[9/16]"
+      />
     </div>
   </TransitionGeneric>
 </template>
