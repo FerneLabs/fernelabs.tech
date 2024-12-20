@@ -21,7 +21,7 @@ const getImgUrl = () => {
     :to="`/game/${gameId}`"
     :class="`flex flex-col mx-8 p-4 w-full md:w-1/3 lg:w-1/4 xl:w-1/5 cursor-pointer ${transitionClass}`"
   >
-    <img :src="getImgUrl()" class="w-full h-full" />
+    <img :src="getImgUrl()" :alt="`${gameId} cover`" class="w-full h-full" />
     <h3 class="text-xl mt-2 md:text-base">{{ title }}</h3>
     <p class="text-base md:text-xs tracking-tight font-bold text-primary">{{ subtitle }}</p>
   </RouterLink>
