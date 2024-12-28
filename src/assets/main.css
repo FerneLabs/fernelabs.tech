@@ -17,8 +17,11 @@
   color: #4a2d1b;
 }
 
-html {
+html,
+body,
+main {
   scroll-behavior: smooth;
+  height: 100%;
 }
 
 h1 {
