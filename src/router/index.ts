@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { app } from '../main'
 import HomeView from '../views/HomeView.vue'
 import GameView from '../views/GameView.vue'
 
@@ -14,6 +15,14 @@ const router = createRouter({
       path: '/game/:id',
       name: 'game',
       component: GameView,
+    },
+    {
+      path: '/app/controller-vue',
+      name: 'app-controller-vue',
+      component: async () => {
+        app?.unmount()
+        return import('../embedded/controller-vue/controller-vue.js').then(module => module.default)
+      }
     },
   ],
   scrollBehavior(to, from, savedPosition) {

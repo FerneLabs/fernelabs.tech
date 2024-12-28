@@ -22,6 +22,6 @@ const firebaseConfig = {
 // Initialize Firebase
 export const firebaseApp = initializeApp(firebaseConfig);
 
-const app = createApp(App)
+export const app = createApp(App)
 app.use(router)
 app.mount('#app')
