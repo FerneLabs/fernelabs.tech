@@ -5471,7 +5471,7 @@ var _w = Qr, xw = ps, Ew = vw, Sw = ps, Cw = er, Iw = {
   ungzip: Sw,
   constants: Cw
 };
-const { Deflate: n_, deflate: r_, deflateRaw: a_, gzip: Tw } = zb, { Inflate: i_, inflate: o_, inflateRaw: s_, ungzip: Bw } = Iw;
+const { Deflate: r_, deflate: a_, deflateRaw: i_, gzip: Tw } = zb, { Inflate: o_, inflate: s_, inflateRaw: c_, ungzip: Bw } = Iw;
 var Ow = Tw, Dw = Bw;
 function kl(e) {
   if (!Number.isSafeInteger(e) || e < 0)
@@ -14596,7 +14596,7 @@ const Ca = "0x03cae44b2932cf573cad525396df80a09a6897aafc6b9cb2deb5e5b68e5e38e9",
 }, Fv = { class: "flex flex-col justify-center items-center h-full" }, qv = {
   key: 0,
   class: "flex flex-col justify-center items-center h-full"
-}, Zv = /* @__PURE__ */ zg({
+}, Zv = { class: "max-w-[90%] break-all" }, Kv = /* @__PURE__ */ zg({
   __name: "ControllerVue",
   setup(e) {
     const t = ic(), n = ic(), r = new Hv(Vv()), a = async () => {
@@ -14610,9 +14610,9 @@ const Ca = "0x03cae44b2932cf573cad525396df80a09a6897aafc6b9cb2deb5e5b68e5e38e9",
     return Rg(async () => {
       await r.probe() && await a();
     }), (s, l) => (_i(), xi("main", Fv, [
-      l[0] || (l[0] = Dn("h1", null, "Vue + Controller Test", -1)),
+      l[0] || (l[0] = Dn("h1", { class: "text-3xl font-bold text-center mx-2 my-4" }, "Vue + Controller Test", -1)),
       t.value ? (_i(), xi("div", qv, [
-        Dn("p", null, "Account: " + oc(t.value.address), 1),
+        Dn("p", Zv, "Account: " + oc(t.value.address), 1),
         Dn("p", null, "Username: " + oc(n.value), 1),
         Dn("div", { class: "flex justify-center items-center" }, [
           Dn("button", {
@@ -14631,7 +14631,7 @@ const Ca = "0x03cae44b2932cf573cad525396df80a09a6897aafc6b9cb2deb5e5b68e5e38e9",
       }, " Connect "))
     ]));
   }
-}), c_ = Lg(Zv).mount("#app");
+}), l_ = Lg(Kv).mount("#app");
 export {
-  c_ as default
+  l_ as default
 };
