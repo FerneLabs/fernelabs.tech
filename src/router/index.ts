@@ -24,6 +24,14 @@ const router = createRouter({
         return import('../embedded/controller-vue/controller-vue.js').then(module => module.default)
       }
     },
+    {
+      path: '/app/tg-controller-vue',
+      name: 'app-tg-controller-vue',
+      component: async () => {
+        app?.unmount()
+        return import('../embedded/tg-controller-vue/tg-controller-vue.js').then(module => module.default)
+      }
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     // For some reason when opening the link with hash, negative top is needed
