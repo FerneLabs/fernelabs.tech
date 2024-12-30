@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { app } from '../main'
 import HomeView from '../views/HomeView.vue'
 import GameView from '../views/GameView.vue'
+import AppView from '../views/AppView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,21 +17,18 @@ const router = createRouter({
       name: 'game',
       component: GameView,
     },
+    // {
+    //   path: '/app/controller-vue',
+    //   name: 'app-controller-vue',
+    //   component: async () => {
+    //     app?.unmount()
+    //     return import('../embedded/controller-vue/controller-vue.js').then(module => module.default)
+    //   }
+    // },
     {
-      path: '/app/controller-vue',
-      name: 'app-controller-vue',
-      component: async () => {
-        app?.unmount()
-        return import('../embedded/controller-vue/controller-vue.js').then(module => module.default)
-      }
-    },
-    {
-      path: '/app/tg-controller-vue',
-      name: 'app-tg-controller-vue',
-      component: async () => {
-        app?.unmount()
-        return import('../embedded/tg-controller-vue/tg-controller-vue.js').then(module => module.default)
-      }
+      path: '/app/:id',
+      name: 'app',
+      component: AppView
     },
   ],
   scrollBehavior(to, from, savedPosition) {
