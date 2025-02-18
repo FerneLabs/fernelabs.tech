@@ -94,7 +94,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex w-full h-screen items-center justify-center animated-section">
+  <div class="flex w-full h-screen items-center justify-center animated-section bg-background">
     <h1>we make</h1>
     <h1 class="text-primary font-bold mt-12 ml-4">{{ displayedWord.slice(0, -1) }}</h1>
     <h1 class="text-primary font-bold mt-12 ml-0 min-h-11 min-w-4 animate-blockCaret">
